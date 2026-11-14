@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eduardoisaacrojasjuarez.github.io/sitemap.xml

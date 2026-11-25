@@ -1,4 +1,7 @@
 
+/* =========================================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+   ========================================================= */
 
 :root {
   color-scheme: light;
@@ -12,6 +15,7 @@
   --suave: #64748b;
   --barra: rgba(255, 255, 255, .82);
   --sombra: 0 8px 30px rgba(25, 50, 80, .06);
+
   --radio: 14px;
   --ancho: 1080px;
 }
@@ -40,7 +44,12 @@ body {
   background: var(--acento);
 }
 
-/* Accesibilidad */
+
+/* =========================================================
+   2. ACCESIBILIDAD
+   ========================================================= */
+
+/* Enlace para saltar directamente al contenido */
 
 .skip {
   position: absolute;
@@ -59,6 +68,8 @@ body {
   z-index: 100;
 }
 
+/* Texto visible únicamente para lectores de pantalla */
+
 .solo-lectores {
   position: absolute;
   width: 1px;
@@ -71,7 +82,10 @@ body {
   border: 0;
 }
 
-/* Navegación */
+
+/* =========================================================
+   3. NAVEGACIÓN
+   ========================================================= */
 
 .top {
   position: sticky;
@@ -111,7 +125,10 @@ nav a:focus-visible {
   text-decoration: none;
 }
 
-/* Contenido principal */
+
+/* =========================================================
+   4. ESTRUCTURA Y CONTENIDO PRINCIPAL
+   ========================================================= */
 
 main {
   max-width: var(--ancho);
@@ -119,13 +136,18 @@ main {
   padding: 0 28px 55px;
 }
 
+/* Estructura general de las secciones */
+
 section {
   padding: 38px 0;
   border-bottom: 1px solid var(--linea);
+
   display: grid;
   grid-template-columns: 12rem minmax(0, 1fr);
   gap: 12px 36px;
 }
+
+/* Títulos de cada sección */
 
 section > h2 {
   margin: 0;
@@ -133,6 +155,8 @@ section > h2 {
   color: var(--acento);
   letter-spacing: -.035em;
 }
+
+/* Contenedor del contenido */
 
 .cuerpo {
   max-width: 72ch;
@@ -147,7 +171,10 @@ section > h2 {
   margin: 0 0 16px;
 }
 
-/* Presentación */
+
+/* =========================================================
+   5. PRESENTACIÓN PERSONAL
+   ========================================================= */
 
 .hero {
   display: flex;
@@ -155,9 +182,12 @@ section > h2 {
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+
   padding: 65px 0 85px;
   border-bottom: 0;
 }
+
+/* Fotografía de perfil */
 
 .hero img {
   width: 150px;
@@ -168,12 +198,16 @@ section > h2 {
   box-shadow: 0 0 0 1px var(--linea), var(--sombra);
 }
 
+/* Nombre principal */
+
 h1 {
   font: 750 clamp(2.4rem, 6vw, 4rem)/1.08
         system-ui, sans-serif;
   margin: 0 0 14px;
   letter-spacing: -.055em;
 }
+
+/* Descripción introductoria */
 
 .lead {
   font-size: clamp(1rem, 2vw, 1.15rem);
@@ -182,6 +216,8 @@ h1 {
   max-width: 58ch;
   color: var(--suave);
 }
+
+/* Enlaces personales */
 
 .enlaces {
   display: flex;
@@ -199,6 +235,8 @@ h1 {
   text-decoration: underline;
 }
 
+/* Elemento decorativo del Misti */
+
 .misti {
   position: absolute;
   left: 0;
@@ -211,7 +249,10 @@ h1 {
   pointer-events: none;
 }
 
-/* Títulos y artículos */
+
+/* =========================================================
+   6. TÍTULOS Y ARTÍCULOS
+   ========================================================= */
 
 h3 {
   font-size: 1.12rem;
@@ -220,13 +261,17 @@ h3 {
   letter-spacing: -.02em;
 }
 
+/* Tarjetas de contenido */
+
 article {
   padding: 16px 18px;
   margin: 12px 0;
+
   background: var(--superficie);
   border: 1px solid var(--linea);
   border-radius: var(--radio);
   box-shadow: var(--sombra);
+
   transition: border-color .2s ease, transform .2s ease;
 }
 
@@ -243,7 +288,10 @@ article p:last-child {
   margin-bottom: 0;
 }
 
-/* Enlaces */
+
+/* =========================================================
+   7. ENLACES GENERALES
+   ========================================================= */
 
 a {
   color: var(--acento);
@@ -256,6 +304,8 @@ a:hover {
   color: var(--acento-hover);
 }
 
+/* Indicador visual de navegación con teclado */
+
 a:focus-visible,
 .tabla:focus-visible {
   outline: 3px solid #f5a524;
@@ -263,7 +313,10 @@ a:focus-visible,
   border-radius: 4px;
 }
 
-/* Listas */
+
+/* =========================================================
+   8. LISTAS
+   ========================================================= */
 
 ul.linea {
   list-style: none;
@@ -275,6 +328,7 @@ ul.linea li {
   padding: 9px 0 9px 14px;
   border-left: 3px solid var(--linea);
   margin-bottom: 7px;
+
   transition: border-color .2s ease, padding-left .2s ease;
 }
 
@@ -283,7 +337,10 @@ ul.linea li:hover {
   padding-left: 19px;
 }
 
-/* Compañeros: dos columnas */
+
+/* =========================================================
+   9. LISTAS DE COMPAÑEROS EN DOS COLUMNAS
+   ========================================================= */
 
 .dos-columnas {
   display: grid;
@@ -297,16 +354,24 @@ ul.linea li:hover {
   overflow-wrap: anywhere;
 }
 
-/* Tablas generales */
+
+/* =========================================================
+   10. TABLAS GENERALES
+   ========================================================= */
+
+/* Contenedor exterior */
 
 .tabla {
   overflow-x: auto;
   margin: 18px 0 10px;
+
   border: 1px solid var(--linea);
   border-radius: var(--radio);
   background: var(--superficie);
   box-shadow: var(--sombra);
 }
+
+/* Configuración base de las tablas */
 
 table {
   border-collapse: collapse;
@@ -314,6 +379,8 @@ table {
   min-width: 560px;
   font-size: .94rem;
 }
+
+/* Celdas */
 
 th,
 td {
@@ -323,34 +390,52 @@ td {
   vertical-align: top;
 }
 
+/* Encabezados */
+
 thead th {
   background: rgba(23, 105, 170, .08);
   font-size: .88rem;
   font-weight: 700;
 }
 
+/* Encabezados de filas */
+
 tbody th {
   font-weight: 650;
 }
+
+/* Efecto al pasar el cursor */
 
 tbody tr:hover {
   background: rgba(23, 105, 170, .035);
 }
 
+/* Eliminar borde inferior de la última fila */
+
 tr:last-child > * {
   border-bottom: 0;
 }
 
-/* Cursos y docentes */
+
+/* =========================================================
+   11. TABLA DE CURSOS Y DOCENTES
+   ========================================================= */
+
+/* Esta sección utiliza todo el ancho disponible,
+   en lugar de conservar la distribución de dos columnas. */
 
 #cursos {
   display: block;
   width: 100%;
 }
 
+/* Título de la sección */
+
 #cursos > h2 {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
+
+/* Descripción y contenido */
 
 #cursos .cuerpo {
   width: 100%;
@@ -358,20 +443,26 @@ tr:last-child > * {
   min-width: 0;
 }
 
+/* Contenedor de la tabla */
+
 #cursos .tabla {
   width: 100%;
-  margin: 20px 0 12px;
+  margin: 18px 0 10px;
   overflow-x: auto;
 }
+
+/* Tabla de cursos */
 
 #cursos .tabla table {
   width: 100%;
   min-width: 650px;
   table-layout: fixed;
   border-collapse: collapse;
+  font-size: .94rem;
+  line-height: 1.6;
 }
 
-/* Ancho de las columnas */
+/* Distribución equilibrada de las columnas */
 
 #cursos .tabla th:nth-child(1),
 #cursos .tabla td:nth-child(1) {
@@ -380,35 +471,46 @@ tr:last-child > * {
 
 #cursos .tabla th:nth-child(2),
 #cursos .tabla td:nth-child(2) {
-  width: 33%;
+  width: 34%;
 }
 
 #cursos .tabla th:nth-child(3),
 #cursos .tabla td:nth-child(3) {
-  width: 33%;
+  width: 32%;
 }
 
-/* Presentación de las celdas */
+/* Espaciado uniforme de las celdas */
 
 #cursos .tabla th,
 #cursos .tabla td {
-  padding: 15px 18px;
+  padding: 12px 15px;
   vertical-align: middle;
 }
 
+/* Encabezado de la tabla */
+
 #cursos .tabla thead th {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-size: .88rem;
 }
+
+/* Nombre de los cursos */
 
 #cursos .tabla tbody th {
   font-weight: 650;
 }
 
-/* Enlaces de docentes */
+/* Nombres de los docentes */
+
+#cursos .tabla tbody td {
+  font-weight: 400;
+}
+
+/* Enlaces a perfiles profesionales */
 
 #cursos .enlaces-docente {
-  white-space: nowrap;
+  white-space: normal;
   vertical-align: middle;
 }
 
@@ -417,7 +519,17 @@ tr:last-child > * {
   white-space: nowrap;
 }
 
-/* Notas */
+/* Separador entre LinkedIn y Web */
+
+#cursos .separador {
+  color: var(--suave);
+  padding: 0 2px;
+}
+
+
+/* =========================================================
+   12. NOTAS Y OBSERVACIONES
+   ========================================================= */
 
 .nota {
   font-size: .88rem;
@@ -425,23 +537,33 @@ tr:last-child > * {
   margin-top: 16px;
 }
 
-/* Pie de página */
+
+/* =========================================================
+   13. PIE DE PÁGINA
+   ========================================================= */
 
 footer {
   max-width: var(--ancho);
   margin: auto;
   padding: 24px 28px;
+
   color: var(--suave);
   font-size: .88rem;
   border-top: 1px solid var(--linea);
 }
 
-/* Adaptación a dispositivos */
+
+/* =========================================================
+   14. ADAPTACIÓN A TABLET Y PANTALLAS MEDIANAS
+   ========================================================= */
 
 @media (max-width: 760px) {
+
   main {
     padding: 0 20px 40px;
   }
+
+  /* Las secciones pasan a una sola columna */
 
   section {
     grid-template-columns: 1fr;
@@ -453,6 +575,8 @@ footer {
     font-size: 1.25rem;
   }
 
+  /* Presentación */
+
   .hero {
     padding: 38px 0 75px;
     gap: 22px;
@@ -463,42 +587,76 @@ footer {
     height: 120px;
   }
 
+  /* Navegación */
+
   nav {
     padding: 10px 16px;
     gap: 3px;
   }
+
+  /* Cursos: conservar el desplazamiento horizontal
+     si la tabla no cabe en la pantalla. */
+
+  #cursos .tabla {
+    max-width: 100%;
+  }
 }
 
+
+/* =========================================================
+   15. ADAPTACIÓN A MÓVILES
+   ========================================================= */
+
 @media (max-width: 520px) {
+
+  /* Listas */
+
   .dos-columnas {
     grid-template-columns: 1fr;
   }
+
+  /* Título principal */
 
   h1 {
     font-size: 2.5rem;
   }
 
+  /* Presentación */
+
   .hero {
     align-items: flex-start;
   }
+
+  /* Navegación */
 
   nav a {
     font-size: .84rem;
     padding: 6px 9px;
   }
 
+  /* Tarjetas */
+
   article {
     padding: 14px;
   }
+
+  /* Tabla de cursos:
+     mantiene sus columnas y permite desplazamiento horizontal. */
 
   #cursos .tabla table {
     min-width: 650px;
   }
 }
 
-/* Modo oscuro automático */
+
+/* =========================================================
+   16. MODO OSCURO AUTOMÁTICO
+   ========================================================= */
+
+/* Se activa cuando el dispositivo utiliza el tema oscuro. */
 
 @media (prefers-color-scheme: dark) {
+
   :root {
     color-scheme: dark;
 
@@ -513,21 +671,31 @@ footer {
     --sombra: 0 8px 30px rgba(0, 0, 0, .18);
   }
 
+  /* Fondo de tablas */
+
   .tabla {
     background: var(--superficie);
   }
+
+  /* Encabezados de tablas */
 
   thead th {
     background: #1a2a40;
   }
 
+  /* Interacción de filas */
+
   tbody tr:hover {
     background: rgba(112, 186, 255, .05);
   }
 
+  /* Imagen de perfil */
+
   .hero img {
     border-color: var(--superficie);
   }
+
+  /* Selección de texto */
 
   ::selection {
     color: #0b1220;
@@ -535,9 +703,16 @@ footer {
   }
 }
 
-/* Movimiento reducido */
+
+/* =========================================================
+   17. ACCESIBILIDAD: MOVIMIENTO REDUCIDO
+   ========================================================= */
+
+/* Reduce animaciones para usuarios que lo soliciten
+   desde la configuración de su sistema operativo. */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -548,11 +723,18 @@ footer {
   }
 }
 
-/* Impresión */
+
+/* =========================================================
+   18. ESTILOS PARA IMPRESIÓN
+   ========================================================= */
 
 @media print {
+
+  /* Colores adecuados para impresión */
+
   :root {
     color-scheme: light;
+
     --tinta: #000;
     --fondo: #fff;
     --superficie: #fff;
@@ -567,16 +749,22 @@ footer {
     font-size: 11pt;
   }
 
+  /* Ocultar elementos innecesarios */
+
   .top,
   .skip,
   .misti {
     display: none;
   }
 
+  /* Aprovechar el ancho de la hoja */
+
   main {
     max-width: none;
     padding: 0;
   }
+
+  /* Distribución de las secciones */
 
   section {
     display: block;
@@ -587,14 +775,20 @@ footer {
     margin-bottom: 10px;
   }
 
+  /* Tarjetas */
+
   article {
     box-shadow: none;
     break-inside: avoid;
   }
 
+  /* Enlaces */
+
   a {
     color: #000;
   }
+
+  /* Pie de página */
 
   footer {
     padding: 15px 0;

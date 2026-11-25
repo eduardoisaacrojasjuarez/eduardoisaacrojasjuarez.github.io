@@ -1,4 +1,5 @@
 
+
 :root {
   color-scheme: light;
 
@@ -296,7 +297,7 @@ ul.linea li:hover {
   overflow-wrap: anywhere;
 }
 
-/* Tablas */
+/* Tablas generales */
 
 .tabla {
   overflow-x: auto;
@@ -338,6 +339,82 @@ tbody tr:hover {
 
 tr:last-child > * {
   border-bottom: 0;
+}
+
+/* Cursos y docentes */
+
+#cursos {
+  display: block;
+  width: 100%;
+}
+
+#cursos > h2 {
+  margin-bottom: 20px;
+}
+
+#cursos .cuerpo {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+#cursos .tabla {
+  width: 100%;
+  margin: 20px 0 12px;
+  overflow-x: auto;
+}
+
+#cursos .tabla table {
+  width: 100%;
+  min-width: 650px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* Ancho de las columnas */
+
+#cursos .tabla th:nth-child(1),
+#cursos .tabla td:nth-child(1) {
+  width: 34%;
+}
+
+#cursos .tabla th:nth-child(2),
+#cursos .tabla td:nth-child(2) {
+  width: 33%;
+}
+
+#cursos .tabla th:nth-child(3),
+#cursos .tabla td:nth-child(3) {
+  width: 33%;
+}
+
+/* Presentación de las celdas */
+
+#cursos .tabla th,
+#cursos .tabla td {
+  padding: 15px 18px;
+  vertical-align: middle;
+}
+
+#cursos .tabla thead th {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#cursos .tabla tbody th {
+  font-weight: 650;
+}
+
+/* Enlaces de docentes */
+
+#cursos .enlaces-docente {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+#cursos .enlaces-docente a {
+  display: inline;
+  white-space: nowrap;
 }
 
 /* Notas */
@@ -412,6 +489,10 @@ footer {
 
   article {
     padding: 14px;
+  }
+
+  #cursos .tabla table {
+    min-width: 650px;
   }
 }
 
@@ -518,59 +599,4 @@ footer {
   footer {
     padding: 15px 0;
   }
-}
-
-
-/* Optimización de tabla de cursos y docentes */
-
-/* Aprovechar el ancho disponible */
-#cursos .cuerpo {
-  max-width: none;
-  min-width: 0;
-}
-
-/* Contenedor */
-#cursos .tabla {
-  width: 100%;
-  overflow-x: auto;
-}
-
-/* Tabla */
-#cursos .tabla table {
-  width: 100%;
-  min-width: 650px;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
-/* Distribución de las tres columnas */
-#cursos .tabla th:nth-child(1),
-#cursos .tabla td:nth-child(1) {
-  width: 32%;
-}
-
-#cursos .tabla th:nth-child(2),
-#cursos .tabla td:nth-child(2) {
-  width: 30%;
-}
-
-#cursos .tabla th:nth-child(3),
-#cursos .tabla td:nth-child(3) {
-  width: 38%;
-}
-
-/* Alineación y separación */
-#cursos .tabla th,
-#cursos .tabla td {
-  padding: 14px 18px;
-  vertical-align: middle;
-}
-
-/* Enlaces del docente */
-#cursos .enlaces-docente {
-  white-space: nowrap;
-}
-
-#cursos .enlaces-docente a {
-  display: inline;
 }

@@ -520,35 +520,57 @@ footer {
   }
 }
 
-/* Corrección de tabla de cursos y docentes */
 
-#cursos .tabla table {
-  width: 100%;
-  min-width: 560px;
-  table-layout: fixed;
+/* Optimización de tabla de cursos y docentes */
+
+/* Aprovechar el ancho disponible */
+#cursos .cuerpo {
+  max-width: none;
+  min-width: 0;
 }
 
+/* Contenedor */
+#cursos .tabla {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Tabla */
+#cursos .tabla table {
+  width: 100%;
+  min-width: 650px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* Distribución de las tres columnas */
 #cursos .tabla th:nth-child(1),
 #cursos .tabla td:nth-child(1) {
-  width: 36%;
+  width: 32%;
 }
 
 #cursos .tabla th:nth-child(2),
 #cursos .tabla td:nth-child(2) {
-  width: 34%;
+  width: 30%;
 }
 
 #cursos .tabla th:nth-child(3),
 #cursos .tabla td:nth-child(3) {
-  width: 30%;
+  width: 38%;
 }
 
-/* Mantener los dos enlaces en una misma línea */
-#cursos .enlaces-docente {
-  white-space: nowrap;
+/* Alineación y separación */
+#cursos .tabla th,
+#cursos .tabla td {
+  padding: 14px 18px;
   vertical-align: middle;
 }
 
+/* Enlaces del docente */
+#cursos .enlaces-docente {
+  white-space: nowrap;
+}
+
 #cursos .enlaces-docente a {
-  display: inline !important;
+  display: inline;
 }
